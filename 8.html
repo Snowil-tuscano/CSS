@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countVowel(str){
+            var count = str.match(/[aeiou]/gi).length
+            /*
+            /[aeiou]/gi is a regular expression with the following components:
+/: Denotes the beginning and end of the regular expression.
+[aeiou]: A character class that matches any single character among 'a', 'e', 'i', 'o', or 'u', which are the lowercase vowels.
+g: A global flag that ensures it finds all matches in the string.
+i: A case-insensitive flag, so it matches both uppercase and lowercase vowels.
+.match returns an array of all the matches found.
+.length is used to determine the count of matched vowels.
+            */
+            return count
+        }
+
+        var string = prompt("\n enter a string ")
+          var result = countVowel(string)
+          document.write(result)
+    </script>
+    
+</body>
+</html>
