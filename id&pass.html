@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="uID">UserID</label>
+        <input type="text" id="uID" size="25" maxlength="10" value="">
+        <br><br>
+        <label for="pswd">Password</label>
+        <input type="password" id="pswd" size="25" maxlength="6" value="">
+        <br><br>
+        <button id="sbmt">Submit</button>
+        <input type="reset" id="rst">
+    </form>
+
+    <script>
+        var sbmt_s = document.getElementById("sbmt");
+        sbmt_s.addEventListener("click", validate, false);
+
+        function validate() {
+            var uid = document.getElementById("uID").innerHTML;
+            var pswd = document.getElementById("pswd");
+            if (uid.value == "" || pswd.value == "") {
+                document.write("Please dont keep Field blank")
+
+            }
+            else {
+                document.write("Login Succesful")
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
