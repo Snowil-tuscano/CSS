@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="calc">Enter the one number </label>
+        <input type="text" id="1">
+        <br> <br>
+        <label for="">Enter the two number </label>
+        <input type="text" id="2">
+        <br>
+        <br>
+        <button id="a" onclick="add()">Addition</button>
+        <button id="s" onclick="sub()">Subtraction</button>
+        <button id="d" onclick="div()">Division</button>
+        <button id="m" onclick="mul()">Multiplication</button>
+        <p id="result"></p>
+    </form>
+    <script>
+
+        var res;
+        function add() {
+            var num1 = parseInt(document.getElementById("1").value)
+            var num2 = parseInt(document.getElementById("2").value)
+            res = num1 + num2
+            document.getElementById("result").innerHTML = "Addition : " + res
+        }
+        function sub() {
+            var num1 = parseInt(document.getElementById("1").value)
+            var num2 = parseInt(document.getElementById("2").value)
+
+            res = num1 - num2
+            document.getElementById("result").innerHTML = "Subtraction : " + res
+        }
+        function div() {
+            var num1 = parseInt(document.getElementById("1").value)
+            var num2 = parseInt(document.getElementById("2").value)
+            res = num1 / num2
+            document.getElementById("result").innerHTML = "Division : " + res
+        }
+        function mul() {
+            var num1 = parseInt(document.getElementById("1").value)
+            var num2 = parseInt(document.getElementById("2").value)
+            res = num1 * num2
+            document.getElementById("result").innerHTML = "Multiplication : " + res
+        }
+    </script>
+</body>
+
+</html>

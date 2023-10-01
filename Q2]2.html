@@ -9,14 +9,18 @@
 
 <body>
     <script>
-        var n1=0, n2=1, next, i;
-        var limit = parseInt(prompt("enter a limit to fibonacii"))
-        for(i=1;i<=limit;i++){
-            document.write(n1+"<b>")
-            next=n1+n2;
-            n1=n2
-            n2=next
+        var n1 = 0, n2 = 1, next, i;
+        function fibonacii(limit) {
+            for (i = 1; i <= limit; i++) {
+                document.write(n1 + "<br>")
+                next = n1 + n2;
+                n1 = n2
+                n2 = next
+            }
         }
+        var limit = parseInt(prompt("enter a limit to fibonacii"))
+        fibonacii(limit)
+
     </script>
 
 </body>

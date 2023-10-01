@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <label for="iarr1">enter the elements of the array seprateed by cooma</label>
+    <input type="text" maxlength="12"  id="1">
+     <br>
+    <label for="iarr2">enter the elements of the array seprateed by cooma</label>
+    <input type="text" maxlength="12"  id="2">
+    <br>
+    <button onclick="fun()" style="width: fit-content;">enter for merge and remove duplicate</button>
+    
+    <script>
+        var iarr1=document.getElementById("1").value
+        var iarr2=document.getElementById("2").value
+        var arr1 = iarr1.split(",")
+        var arr1 = iarr1.split(",")
+        var arr= arr1.concat(arr2)
+        var newarr=[]
+        function fun(){
+          for(i=0;i<arr.lenght;i++){
+            if(!newarr.includes(arr)){
+                newarr.push(arr)
+            }
+          }
+        }
+        alert(newarr)
+    </script>
+    
+</body>
+</html>

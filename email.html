@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mail = prompt("\n enter the email id ")
+        var reg=/(^$|^.*@.*\..*$)/
+        if(mail===null||mail===""){
+            document.write(" please enter a valid mail id ")
+                    }
+       else if(mail.match(reg)){
+            document.write(" valid mail id ")
+
+        }
+        else{
+            document.write("invalid email ")
+        }
+    </script>
+</body>
+</html>

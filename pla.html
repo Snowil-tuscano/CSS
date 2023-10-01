@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = prompt("\n enter the string ")
+        if (str === null || str === "") {
+            document.write("\n invalid op")
+
+        }
+        else if (str == str.split("").reverse().join("")) { //split divide the array and rverse it and again joins it 
+            document.write(str + " String is palindrone")
+        }
+        else {
+            document.write(str + " string is not plaindrone ")
+        }
+    </script>
+</body>
+
+</html>
