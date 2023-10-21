@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    
+    <form> <input type="range" min="0" max="50" onchange="val1()"  id="val">
+        
+    
+    </form>
+
+    <p id="12"></p>
+   <script>
+    function val1(){
+    x=document.getElementById("val").value
+    document.getElementById("12").innerHTML="range is selected from "+x}
+    //document.write("range is selected from "+x)
+   </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+<body onload="getCookie()">
+    <form name>
+        <label> Username: </label>
+        <input type="text" id="username" /><br><br>
+        <label> Password: </label>
+        <input type="password" id="password" /><br><br>
+        <input type="button" value="Register" onclick="setCookie()" />
+        <p id="content"></p>
+</body>
+<script>
+    function setCookie() {
+        if(document.getElementById("username").value ==="" && document.getElementById("password").value ==="") {
+            alert(" please dont keep blank ")
+        }
+        else
+        document.cookie =
+            "password = " + document.getElementById("password").value + ";";
+        getCookie();
+
+    }
+    function getCookie() {
+        var cookiearray = document.cookie;
+        cookiearray = cookiearray.split("=");
+        if (cookiearray[0] == "password")
+            document.getElementById("content").innerHTML = "Last used password: " + cookiearray[1];
+else
+        document.getElementById("content").innerHTML = "Cookie not found"
+    }
+</script>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aadhar Card Validation</title>
+</head>
+<body>
+    <script>
+        var user = prompt("Enter the username");
+        var pass = prompt("Enter the password");
+
+        var regex = /^\d{4}[.-]\d{4}[.-]\d{4}$/;
+
+        if (regex.test(pass)) {
+            alert("Valid Aadhar card");
+        } else {
+            alert("Invalid Aadhar card");
+        }
+    </script>
+</body>
+</html>
