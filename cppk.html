@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">enter your name</label>
+    <input type="text"  id="name">
+    <button onclick="setcookie()"></button>
+    
+    <script>
+        function setcookie(){
+
+            var expir = (new date(date.now()+24*60*60*1000)).toUTCString()
+
+            document.cookie = "name="+document.getElementById("name").value+"expires="+expir 
+            getcookie()
+                }
+
+                function  getcookie(){
+                    var cookarr = document.cookie
+                    cookarr = cookarr.split("=")
+                }
+    </script>
+</body>
+</html>

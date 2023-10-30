@@ -10,23 +10,27 @@
 <body>
     <p id="result"></p>
     <script>//snowil
-        var array = parseInt(prompt("\n enter the array elents "))
+        var array =[1,1,2,4,3,2,3,4,5,5,6,6,6]
         var index = 0, newarr = []
         var limit = array.length
+        var count=0;
         function duparray(arr) {
-            for (var i = 0; i < limit - 1; i++) {
+            for (var i = 0; i < limit ; i++) {
                 for (var j = i + 1; j < limit; j++) {
-                    if (arr[i] === arr[j]) {
+                    if (arr[i] == arr[j]) {
                         newarr[index] = arr[i]
                         index++
+                        count++
                     }
                 }
 
             }
-            return newarr
+            
         }
+        duparray(array)
 
-        document.getElementById("result").innerHTML = "duplicate array : " + duparray(array)
+document.getElementById("result").innerHTML = "Number of counts "+count+"<br>"+"duplicate array : " +newarr
+    
     </script>
 </body>
 
