@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <img src="img1.jpg" id="img" height="50%" width="70%"><br>
+    <input type="button" value="Previous" onclick="slideshow(-1)">
+    <input type="button" value="Next" onclick="slideshow(1)">
+    <script>
+        var pics = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg"];
+        var count = 0;
+        function slideshow(status) {
+            count = count + status;
+            if (count > pics.length - 1) {
+                count = 0;
+            }
+            if (count < 0) {
+                count = pics.length - 1;
+            }
+            document.getElementById("img").src = pics[count];
+        }
+    </script>
+</body>
+
+</html>

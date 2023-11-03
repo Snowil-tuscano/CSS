@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="rotate()">
+   
+   <a id="link"> <img src="img1.jpg" id="img" height="600" width="800"> </a>
+
+    <script>
+        var pics = [["img1.jpg","www.google.com"] ,["img2.jpg","www.google.com"] ,["img3.jpg","www.google.com"]]
+        var count = 0
+        function rotate() {
+            count++; 
+            if (count > pics.length - 1) {
+                count = 0;
+            }
+            document.getElementById("img").src = pics[count][0];
+            document.getElementById("link").href = pics[count][1];
+
+            setTimeout("rotate()", 2000)
+
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

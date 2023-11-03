@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <img src="img1.jpg" id="i1" height="200" width="200" onmouseover="roll(this)" onmouseout="reset()">
+    <img src="img2.jpg" id="i2" height="200" width="200" onmouseover="roll(this)" onmouseout="reset()">
+ //   <img src="img3.jpg" id="i3" height="200" width="200" onmouseover="roll(this)" onmouseout="reset()">
+    <script>
+        function roll(img) {
+            img.src = "img4.jpg"
+        }
+        function reset() {
+            document.getElementById("i1").src = "img1.jpg"
+            document.getElementById("i2").src = "img2.jpg"
+            document.getElementById("i3").src = "img3.jpg"
+        }
+    </script>
+</body>
+
+</html>
