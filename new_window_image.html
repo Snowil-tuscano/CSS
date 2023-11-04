@@ -8,6 +8,7 @@ images in new window as per selection. -->
     <title>Document</title>
 </head>
 <body>
+    <h1>Select one of the image </h1>
     <select name="" id="images" onchange="new1()">
         <option value="">---select---</option>
         <option value="img1.jpg">image 1</option>
@@ -20,7 +21,7 @@ images in new window as per selection. -->
             var selectedImage = document.getElementById("images").value;
 
 
-          var newwin = window.open("","new page","width = 600,height =600%")
+          var newwin = window.open("","new page","width = 1440,height =600%")
                 newwin.document.body.innerHTML = '<img src="' + selectedImage + '" alt="Selected Image" style="max-width:100%; max-height:100%;">';
 
         }
