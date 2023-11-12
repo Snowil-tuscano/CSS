@@ -1,30 +1,36 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-	<title>Digital Clock</title>
-	<script type="text/javascript" src="script.js"></script>
+    <!-- Document title -->
+    <title>Conceal Email Address</title>
+    <!-- JavaScript code starts here -->
+    <script language=JavaScript>
+    <!--
+        // Function to create and conceal an email address
+        function CreateEmailAddress() {
+            // Initialize the email address parts
+            var x = 'BobSmith&smith*c_o_m';
+            var y = 'mai';
+            var z = 'lto';
+           var s = '?subject=Customer Inquiry';
+
+            // Replace special characters to form the email address
+            x = x.replace('&', '@');
+            x = x.replace('*', '.');
+            x = x.replace('_', '');
+            x = x.replace('_', '');
+
+            // Concatenate the email address parts
+            var b = y + z + ':' + x + s;
+
+            // Redirect the browser to the email address
+            window.location = b;
+        }
+    -->
+    </script>
 </head>
 <body>
-	<form>
-		<input type="button" value="START" onclick="startClock()">
-		<input type="button" value="STOP" onclick="stopClock()">
-	</form>
-	<div id="clock"></div>
-    <script>
-        function startClock() {
-    setInterval(displayClock, 1000);
-}
-
-function stopClock() {
-    clearInterval(displayClock);
-}
-
-function displayClock() {
-    var date = new Date();
-    var time = date.toLocaleTimeString();
-    document.getElementById("clock").innerHTML = time;
-}
-
-    </script>
+    <!-- Button to trigger the CreateEmailAddress function -->
+    <input type="button" value="Help" onclick="CreateEmailAddress()">
 </body>
 </html>

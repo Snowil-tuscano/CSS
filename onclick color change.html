@@ -8,7 +8,7 @@
 <body>
     <h1>click on the dropddown list and see the magic </h1>
     <label for="color">Select the Color </label>
-    <select name="color1" id="1" onchange="col()">
+    <select name="color1" id="change" onchange="col()">
         <option value="Red" >Red</option>
         <option value="Green" >Green</option>
         <option value="Blue">Blue</option>
@@ -20,7 +20,7 @@
         function col()
         {
          
-            var col1 = document.getElementById("1").value
+            var col1 = document.getElementById("change").value
             //color = col1.value
             document.body.style.backgroundColor=col1
 
