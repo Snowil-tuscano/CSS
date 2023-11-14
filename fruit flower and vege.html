@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Options</title>
+</head>
+<body>
+    <label for="category">Select a category:</label>
+    <select id="category" onchange="updateOptions()">
+        <option value="">select below option</option>
+        <option value="fruit">Fruit</option>
+        <option value="flower">Flower</option>
+        <option value="color">Colour</option>
+    </select>
+
+    <label for="items">Select an item:</label>
+    <select id="items">
+        <!-- Options will be dynamically populated here -->
+    </select>
+
+    <script>
+        // Declare category globally so both functions can access it
+        var category;
+
+        function updateOptions() {
+            category = document.getElementById("category").value;
+            var itemsSelect = document.getElementById("items");
+
+            // Clear existing options
+            itemsSelect.innerHTML = "";
+
+            // Add new options based on the selected category
+            if (category === "fruit") {
+                addOption("Apple");
+                addOption("Banana");
+                addOption("Orange");
+            } else if (category === "flower") {
+                addOption("Rose");
+                addOption("Lily");
+                addOption("Sunflower");
+            } else if (category === "color") {
+                addOption("Red");
+                addOption("Blue");
+                addOption("Green");
+            }
+        }
+
+        function addOption(value) {
+            var option = document.createElement("option");
+            option.text = value;
+            option.value = value;
+            document.getElementById("items").add(option);
+        }
+
+       
+        
+    </script>
+</body>
+</html>

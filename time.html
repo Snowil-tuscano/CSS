@@ -1,36 +1,33 @@
-
 <html>
-<head>
-    <!-- Document title -->
-    <title>Conceal Email Address</title>
-    <!-- JavaScript code starts here -->
-    <script language=JavaScript>
-    <!--
-        // Function to create and conceal an email address
-        function CreateEmailAddress() {
-            // Initialize the email address parts
-            var x = 'BobSmith&smith*c_o_m';
-            var y = 'mai';
-            var z = 'lto';
-           var s = '?subject=Customer Inquiry';
 
-            // Replace special characters to form the email address
+<head>
+    <title>Conceal Email Address</title>
+    <script language=JavaScript>
+
+        function CreateEmailAddress() {
+
+            var x = 'BobSmith&smith*c_o_m';
+
+            var s = '?subject=Customer Inquiry';
+
+
             x = x.replace('&', '@');
             x = x.replace('*', '.');
-            x = x.replace('_', '');
-            x = x.replace('_', '');
+            x = x.replace('_', "");
+            x = x.replace('_', "");
 
             // Concatenate the email address parts
-            var b = y + z + ':' + x + s;
+            var b = 'mailto' + ':' + x + s;
 
-            // Redirect the browser to the email address
             window.location = b;
         }
-    -->
+
     </script>
 </head>
+
 <body>
-    <!-- Button to trigger the CreateEmailAddress function -->
+
     <input type="button" value="Help" onclick="CreateEmailAddress()">
 </body>
+
 </html>

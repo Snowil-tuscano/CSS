@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">enter your name </label>
+    <input type="text" id="name" placeholder="enter your name"> <br><br>
+    <input type="button" value="enable field " onclick="enable()">
+    <input type="button" value="disbale field" onclick="disable()">
+    <script>
+        function enable(){
+            document.getElementById("name").disabled= false
+            
+        }
+        
+        function disable(){
+            document.getElementById("name").disabled= true
+        }
+    </script>
+
+    
+</body>
+</html>

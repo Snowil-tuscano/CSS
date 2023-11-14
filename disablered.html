@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Window</title>
+</head>
+<body>
+
+<button onclick="openChildWindow()">Open Child Window</button>
+
+<script>
+    let childWindow;
+
+    function openChildWindow() {
+        // Open a child window and store the reference
+        childWindow = window.open('', 'Child Window', 'width=400,height=300');
+    }
+
+    function accessChildWindowElement() {
+        if (childWindow) {
+            // Access an element in the child window by its ID
+            let childElement = childWindow.document.getElementById('childElementId');
+
+            // Check if the element is found
+            if (childElement) {
+                // Perform actions on the element
+                childElement.innerHTML = 'Hello from Parent Window!';
+            } else {
+                alert('Element not found in the child window.');
+            }
+        } else {
+            alert('Child window is not open.');
+        }
+    }
+</script>
+
+</body>
+</html>
