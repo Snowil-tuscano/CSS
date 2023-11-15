@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            WAP to create, read, update and delete cookie.
+        </title>
+    </head>
+    <body>
+        <script>
+            function createCookie(){
+                var nameofcookie = document.myform.cookiename.value;
+                var valueofcookie = document.myform.cookievalue.value;
+                document.cookie=nameofcookie+"="+valueofcookie;
+                alert("Cookie created Successfully....");
+            }
+            function readCookie(){
+                alert("All Cookies : "+document.cookie);
+            }
+            function updateCookie(){
+                var nameofcookie = document.myform.cookiename.value;
+                var valueofcookie = document.myform.cookievalue.value;
+                document.cookie=nameofcookie+"="+valueofcookie;
+                alert("Cookie updated Successfully....");
+            }
+            function deleteCookie(){
+                var nameofcookie = document.myform.cookiename.value;
+                var valueofcookie = document.myform.cookievalue.value;
+                document.cookie=nameofcookie+"="+valueofcookie+";"+"expires= Thu, 01-Jan-1999 00:00:01 GMT";
+                alert("Cookie deleted succcessfully....");
+
+            }
+        </script>
+        <form name="myform">
+            Enter Cookie Name : <input type="text" name="cookiename"><br>
+            Enter Cookie Value : <input type="text" name="cookievalue"><br>
+            <input type="button" value="CreateCookie" onclick="createCookie()">
+            <input type="button" value="ReadCookie" onclick="readCookie()">
+            <input type="button" value="UpdateCookie" onclick="updateCookie()">
+            <input type="button" value="DeleteCookie" onclick="deleteCookie()">
+        </form>
+    </body>
+</html>
