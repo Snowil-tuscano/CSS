@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <form name="validate1">
     <label>Enter Your UserName</label>
     <input type="text" id="name"><br><br/>
 
@@ -18,6 +19,7 @@
     <label>Enter Your Confirm Password</label>
     <input type="password" id="cpass"><br><br>
     <input type="button" value="Validate" onclick="validate()">
+</form>
 
     <script>
         function validate(){
@@ -28,17 +30,23 @@
 
             if (uname<6) {
                 alert("name should not be less than 6 charecters")
+                return;
             }
-            var reg = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}$/; 
+            var reg = /^[A-Za-z0-9._+]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}$/; 
             if (!(reg.test(mail))) {
                 alert(" Enter a Valid Email")
+                return;
                 
             }
             if (pass!=confirmpass) {
                 alert(" Passwords do not match")
+                return;
                 
             }
-            
+
+            alert(" Form is submitted sucessfully ")
+
+            validate1.reset()
 
         }
     </script>
