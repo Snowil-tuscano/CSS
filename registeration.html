@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter Your UserName</label>
+    <input type="text" id="name"><br><br/>
+
+    <label>Enter Your Email</label>
+    <input type="text" id="email"><br><br>
+
+    <label>Enter Your Password</label>
+    <input type="password" id="pass"><br><br>
+
+    <label>Enter Your Confirm Password</label>
+    <input type="password" id="cpass"><br><br>
+    <input type="button" value="Validate" onclick="validate()">
+
+    <script>
+        function validate(){
+            uname = document.getElementById("name").value
+            mail = document.getElementById("email").value
+            pass = document.getElementById("pass").value
+            confirmpass =document.getElementById("cpass").value
+
+            if (uname<6) {
+                alert("name should not be less than 6 charecters")
+            }
+            var reg = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}$/; 
+            if (!(reg.test(mail))) {
+                alert(" Enter a Valid Email")
+                
+            }
+            if (pass!=confirmpass) {
+                alert(" Passwords do not match")
+                
+            }
+            
+
+        }
+    </script>
+
+    
+</body>
+</html>

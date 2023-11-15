@@ -12,13 +12,19 @@
             margin-right: 20px; 
         }
     </style>
-    <img src="img1.jpg" height="400" id="img" width="600"><br><br>
-    <label for="fruits" id="mango" onmouseover="change('mango.jpg')">mango </label>
-    <label for="fruits" id="banana" onmouseover="change('banaa.jpg')">banana</label>
-    <label for="fruits" id="orange" onmouseover="change('orange.jpg')">orange</label>
+    <!-- sample image to display -->
+    <img src="img1.jpg" height="400" id="img" width="600"><br><br> 
+    <label for="fruits" id="mango" onmouseover="change('mango.jpg')" onmouseout="back()">mango </label>
+    <label for="fruits" id="banana" onmouseover="change('banaa.jpg')"onmouseout="back()">banana</label>
+    <label for="fruits" id="orange" onmouseover="change('orange.jpg')"onmouseout="back()">orange</label>
     <script>
         function change(imageSource) {
+            
             document.getElementById("img").src = imageSource;
+        }
+        function back() {
+            document.getElementById("img").src="img1.jpg"
+            
         }
     </script>
 </body>

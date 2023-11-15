@@ -1,0 +1,57 @@
+<!-- Write a JavaScript in which when user rolls over the name of fruit, the corresponding image should be 
+displayed. Along with the appropriate image display, additional window should pop up displaying the benefit of 
+each fruit. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /* Add some CSS styles for label spacing */
+        label {
+            margin-right: 20px;
+        }
+    </style>
+    <!-- sample image to display -->
+    <img src="img1.jpg" height="400" id="img" width="600"><br><br>
+    <label for="fruits" id="mango" onmouseover="change('mango.jpg')">mango </label>
+    <label for="fruits" id="banana" onmouseover="change('banaa.jpg')">banana</label>
+    <label for="fruits" id="orange" onmouseover="change('orange.jpg')">orange</label>
+    <script>
+        function change(imageSource) {
+            if (imageSource == 'mango.jpg') {
+                document.getElementById("img").src = imageSource;
+                var newwin = window.open("", "new window", "width= 600, height=400")
+                newwin.document.write(" Mango is sweet")
+                setTimeout(function () {
+                     newwin.close();}, 2000)
+
+            }
+            if (imageSource == 'banaa.jpg') {
+                document.getElementById("img").src = imageSource;
+                var newwin = window.open("", "new window", "width= 600, height=400")
+                newwin.document.write(" Banana is sweet and long " + imageSource)
+                setTimeout(function () {
+                     newwin.close();}, 2000)
+
+            }
+            if (imageSource == 'orange.jpg') {
+                document.getElementById("img").src = imageSource;
+                var newwin = window.open("", "new window", "width= 600, height=400")
+                newwin.document.write(" Orange  is sweet and sour ")
+                setTimeout(function () {
+                     newwin.close();}, 2000)
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
