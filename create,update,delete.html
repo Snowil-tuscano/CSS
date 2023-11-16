@@ -22,9 +22,11 @@
                 alert("Cookie updated Successfully....");
             }
             function deleteCookie(){
+                exp = new Date()
+                exp.setMonth(exp.getMonth()-1)
                 var nameofcookie = document.myform.cookiename.value;
                 var valueofcookie = document.myform.cookievalue.value;
-                document.cookie=nameofcookie+"="+valueofcookie+";"+"expires= Thu, 01-Jan-1999 00:00:01 GMT";
+                document.cookie=nameofcookie+"="+valueofcookie+";"+"expires="+exp.toUTCString();
                 alert("Cookie deleted succcessfully....");
 
             }
