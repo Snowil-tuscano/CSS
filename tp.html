@@ -1,37 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Chained Menu</title>
-    <script type="text/javascript">
-        function updateMenu() {
-            var menu1 = document.getElementById("menu1");
-            var menu2 = document.getElementById("menu2");
-            menu2.innerHTML = "";
-            if (menu1.value == "Fruits") {
-                var options = ["Apple", "Banana", "Cherry"];
-            } else if (menu1.value == "Vegetables") {
-                var options = ["Potato", "Tomato", "Cabbage"];
-            }
-            for (var i = 0; i < options.length; i++) {
-                var opt = options[i];
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                menu2.appendChild(el);
-            }
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowil</title>
 </head>
 
 <body>
-    <select id="menu1" onchange="updateMenu();">
-        <option value="">Select category</option>
-        <option value="Fruits">Fruits</option>
-        <option value="Vegetables">Vegetables</option>
+    <select id="country" onchange="change(this.value)">
+        <option value="">Select The Country</option>
+        <option value="india">India</option>
+        <option value="Usa">Usa</option>
     </select>
-    <select id="menu2">
+    <select id="city" onchange="city(this.value)">
     </select>
+    <select id="food" onchange="display(this.value)">
+    </select>
+    <h1 id="dis"></h1>
+    <script>
+        function change(val) {
+            if (val == "india") {
+                document.getElementById("city").innerHTML = "<option value=>Select the City</option><option value='mumbai'>mumbai</option><option value='delhi'>delhi</option>"
+            }
+            if (val == "Usa") {
+                document.getElementById("city").innerHTML = "<option>Select the City</option><option value='Alaska'>Alaska</option><option value='California'>California</option>"
+            }
+        }
+        function city(newval) {
+            if (newval == "mumbai") {
+                document.getElementById("food").innerHTML = "<option>Select the Food</option><option value='vadapav'>vadapav</option><option value='dahi chaat'>dahi chaat</option><option value='pani puri'>panipuri</option>"
+            }   
+            if (newval == "delhi") {
+                document.getElementById("food").innerHTML =
+                    "<option>Select the Food</option><option>Momos</option><option>Chole Kulcha</option><option >Rajma Chawal</option>"
+            }
+            if (newval == "Alaska") {
+                document.getElementById("food").innerHTML = "<option>Select the Food</option><option>Cheese Burger </option><option>Ham burger</option><option >mutton Burger</option>"
+            }
+            if (newval == "California") {
+                document.getElementById("food").innerHTML =
+                    "<option>Select the Food</option><option>Fish</option><option>Chicken</option><option >Meat</option>"
+            }
+        }
+        function display(dis) {
+            document.getElementById("dis").innerHTML = "Hurray! You selected: " + "" + dis;
+        }
+    </script>
 </body>
 
 </html>
