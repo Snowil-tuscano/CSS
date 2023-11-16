@@ -1,8 +1,37 @@
-<!DOCTYPE html> 
-<html> 
-<body> 
-<script> 
- window.status = "Welcome!! This is information  in displayed in your status bar!!"; 
-</script> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chained Menu</title>
+    <script type="text/javascript">
+        function updateMenu() {
+            var menu1 = document.getElementById("menu1");
+            var menu2 = document.getElementById("menu2");
+            menu2.innerHTML = "";
+            if (menu1.value == "Fruits") {
+                var options = ["Apple", "Banana", "Cherry"];
+            } else if (menu1.value == "Vegetables") {
+                var options = ["Potato", "Tomato", "Cabbage"];
+            }
+            for (var i = 0; i < options.length; i++) {
+                var opt = options[i];
+                var el = document.createElement("option");
+                el.textContent = opt;
+                el.value = opt;
+                menu2.appendChild(el);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <select id="menu1" onchange="updateMenu();">
+        <option value="">Select category</option>
+        <option value="Fruits">Fruits</option>
+        <option value="Vegetables">Vegetables</option>
+    </select>
+    <select id="menu2">
+    </select>
+</body>
+
+</html>

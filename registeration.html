@@ -28,6 +28,12 @@
             pass = document.getElementById("pass").value
             confirmpass =document.getElementById("cpass").value
 
+            if (uname==""||mail==""||pass==""||confirmpass=="") {
+                alert(" Please Dont Keep Blank ")
+                return;
+                
+            }
+
             if (uname<6) {
                 alert("name should not be less than 6 charecters")
                 return;
