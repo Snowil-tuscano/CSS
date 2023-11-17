@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        var browserName = "Unknown Browser";
+
+        var userAgent = window.navigator.userAgent;
+
+        if (userAgent.includes("Chrome")) {
+            browserName = "Google Chrome";
+        } else if (userAgent.includes("Firefox")) {
+            browserName = "Mozilla Firefox";
+        } else if (userAgent.includes("Safari") && userAgent.includes("Version/")) {
+            browserName = "Apple Safari";
+        } else if (userAgent.includes("Edge")) {
+            browserName = "Microsoft Edge";
+        } else if (userAgent.includes("Opera") || userAgent.includes("OPR")) {
+            browserName = "Opera";
+        } else if (userAgent.includes("Trident") || userAgent.includes("MSIE")) {
+            browserName = "Internet Explorer";
+        }
+
+        document.write("You are using " + browserName);
+    </script>
+</body>
+
+</html>
