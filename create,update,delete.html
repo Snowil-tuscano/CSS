@@ -28,12 +28,13 @@
                 var valueofcookie = document.myform.cookievalue.value;
                 document.cookie=nameofcookie+"="+valueofcookie+";"+"expires="+exp.toUTCString();
                 alert("Cookie deleted succcessfully....");
+                myform.reset()
 
             }
         </script>
         <form name="myform">
-            Enter Cookie Name : <input type="text" name="cookiename"><br>
-            Enter Cookie Value : <input type="text" name="cookievalue"><br>
+            Enter Cookie Name : <input type="text" name="cookiename"><br><br>
+            Enter Cookie Value : <input type="text" name="cookievalue"><br><br>
             <input type="button" value="CreateCookie" onclick="createCookie()">
             <input type="button" value="ReadCookie" onclick="readCookie()">
             <input type="button" value="UpdateCookie" onclick="updateCookie()">

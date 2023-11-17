@@ -1,52 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snowil</title>
+
 </head>
-
 <body>
-    <select id="country" onchange="change(this.value)">
-        <option value="">Select The Country</option>
-        <option value="india">India</option>
-        <option value="Usa">Usa</option>
-    </select>
-    <select id="city" onchange="city(this.value)">
-    </select>
-    <select id="food" onchange="display(this.value)">
-    </select>
-    <h1 id="dis"></h1>
-    <script>
-        function change(val) {
-            if (val == "india") {
-                document.getElementById("city").innerHTML = "<option value=>Select the City</option><option value='mumbai'>mumbai</option><option value='delhi'>delhi</option>"
-            }
-            if (val == "Usa") {
-                document.getElementById("city").innerHTML = "<option>Select the City</option><option value='Alaska'>Alaska</option><option value='California'>California</option>"
-            }
-        }
-        function city(newval) {
-            if (newval == "mumbai") {
-                document.getElementById("food").innerHTML = "<option>Select the Food</option><option value='vadapav'>vadapav</option><option value='dahi chaat'>dahi chaat</option><option value='pani puri'>panipuri</option>"
-            }   
-            if (newval == "delhi") {
-                document.getElementById("food").innerHTML =
-                    "<option>Select the Food</option><option>Momos</option><option>Chole Kulcha</option><option >Rajma Chawal</option>"
-            }
-            if (newval == "Alaska") {
-                document.getElementById("food").innerHTML = "<option>Select the Food</option><option>Cheese Burger </option><option>Ham burger</option><option >mutton Burger</option>"
-            }
-            if (newval == "California") {
-                document.getElementById("food").innerHTML =
-                    "<option>Select the Food</option><option>Fish</option><option>Chicken</option><option >Meat</option>"
-            }
-        }
-        function display(dis) {
-            document.getElementById("dis").innerHTML = "Hurray! You selected: " + "" + dis;
-        }
-    </script>
-</body>
+<script>
+var str=prompt("Enter the Character to check the its unicode","A");
+var i=str.charCodeAt();
+document.write("The Unicode for "+str+" is "+i+ "<br/><br/>") 
 
+
+var i=parseInt(prompt("Enter the Character to check the its unicode","65"));
+var str=String.fromCharCode(i);
+document.write("The Character for unicode "+i+" is "+str)
+
+</script> 
+</body>
 </html>
