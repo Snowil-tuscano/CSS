@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner with link</title>
+    <style>
+        #img {
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
 </head>
-<body>
-<script>
-var str=prompt("Enter the Character to check the its unicode","A");
-var i=str.charCodeAt();
-document.write("The Unicode for "+str+" is "+i+ "<br/><br/>") 
 
+<body onload="rotate()">
+    <a id="link" href="#">
+        <img src="img1.jpg" id="img" width="600" height="400">
+    </a>
+    <script>
+        var pics = [
+            ["https://www.google.com", "img1.jpg"],
+            ["https://www.yahoo.com", "img2.jpg"],
+            ["https://www.instagram.com", "img3.jpg"]
+        ]
 
-var i=parseInt(prompt("Enter the Character to check the its unicode","65"));
-var str=String.fromCharCode(i);
-document.write("The Character for unicode "+i+" is "+str)
+        var count = 0;
 
-</script> 
+        function rotate() {
+            count = (count + 1) % pics.length;
+            var imgElement = document.getElementById("img");
+            imgElement.style.opacity = 0;
+            setTimeout(function () {
+                imgElement.src = pics[count][1];
+                imgElement.style.opacity = 1;
+            }, 500); // 500 milliseconds for the fade-in effect
+        }
+
+        function updateLink() {
+            document.getElementById("link").href = pics[count][0];
+        }
+
+        setInterval(function () {
+            rotate();
+            updateLink();
+        }, 2000);
+    </script>
 </body>
+
 </html>
