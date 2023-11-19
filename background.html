@@ -13,6 +13,8 @@
             if (col) { // Check if the user entered a color
                 var newWindow = window.open("", "New Page", "width=400, height=400");
                 newWindow.document.body.style.backgroundColor = col;
+                document.body.style.backgroundColor = col;
+                alert(" both  backgrounds are Changed ")
             }
         }
     </script>
