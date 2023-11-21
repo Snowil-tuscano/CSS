@@ -9,7 +9,11 @@
             mywin = window.open("", "MyWindow", "left=500, top=400,width=200,height=200")
         }
         function CloseWindowFunction() {
-            mywin.close();
+            if (mywin.open()==1) {
+                mywin.close();    
+            }
+            else
+               alert("Open a Window")
         } 
     </script>
 </head>
