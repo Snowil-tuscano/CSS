@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        table,
+        th,
+        td,
+        tr {
+            border: 1px solid black;
+        }
+    </style>
+    <table>
+        <tr>
+            <th>Books name</th>
+            <th>Books information</th>
+            <th id="discount">Discount</th>
+        </tr>
+        <tr>
+            <td>ikagi</td>
+            <td>dr bernald</td>
+            <td id="ikagi" onmouseover="dis('ikagi')" onmouseout="reset1('ikagi')"></td>
+        </tr>
+
+        <tr>
+            <td>life begins</td>
+            <td>veronicsa</td>
+            <td id="begins" onmouseover="dis('begins')" onmouseout="reset1('begins')"></td>
+        </tr>
+
+        <tr>
+            <td>shoert spam</td>
+            <td>menezes</td>
+            <td id="shoert" onmouseover="dis('shoert')" onmouseout="reset1('shoert')"></td>
+        </tr>
+    </table>
+    <script>
+        function dis(val) {
+            if (val == "ikagi") {
+                document.getElementById("ikagi").innerHTML = "discount of 10%"
+            }
+            if (val == "begins") {
+                document.getElementById("begins").innerHTML = "discount of 10%"
+            }
+            if (val == "shoert") {
+                document.getElementById("shoert").innerHTML = "discount of 10%"
+            }
+
+        }
+        function reset1(val) {
+            if (val == "ikagi") {
+                document.getElementById("ikagi").innerHTML = " "
+            }
+            if (val == "begins") {
+                document.getElementById("begins").innerHTML = ""
+            }
+            if (val == "shoert") {
+                document.getElementById("shoert").innerHTML = ""
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
