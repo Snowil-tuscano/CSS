@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <table border="1">
+            <tr>
+                <th>name</th>
+                <th><input type="text" id ="name"placeholder="enter your name"></th>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <th><input type="text" id="email" placeholder="enter your Email"></th>
+            </tr>
+            <tr>
+                <th>Pincode</th>
+                <th><input type="number" id="pin" placeholder="enter your name"></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th><input type="button" value="Submit" onclick="submit()"></th>
+            </tr>
+        </table>
+    
+        <script>
+            function submit() {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var pin = document.getElementById("pin").value;
+        
+                if (name === "" || email === "" || pin === "") {
+                    alert("Enter some value; don't leave it blank.");
+                    return;
+                }
+        
+                var rege = /^\d{6}/;
+                if (!rege.test(pin)) {
+                    alert("Pin should be only 6 digits.");
+                    return;
+                }
+        
+                alert("Form submitted successfully.");
+            }
+        </script>
+        
+    
+</body>
+</html>
