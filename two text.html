@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" placeholder="enter a number 1" id="no1">
+        <input type="text" placeholder="enter a number 1" id="no2"> <br><br>
+
+        <input type="button" value="Addition" onclick="add()">
+        <input type="button" value="Subtrsction" onclick="sub()"> <br><br>
+        <label for="">Result Box</label>
+        <input type="text" id="result">
+    </form>
+    <script>
+        function add() {
+            var no1 = parseFloat(document.getElementById("no1").value);
+            var no2 = parseFloat(document.getElementById("no2").value);
+            if (!no1 || !no2) {
+                alert("Don't leave the input fields blank");
+            } else {
+                var result = no1 + no2;
+                document.getElementById("result").value = "Addition = " + result;
+            }
+        }
+
+        function sub() {
+            var no1 = parseFloat(document.getElementById("no1").value);
+            var no2 = parseFloat(document.getElementById("no2").value);
+            if (isNaN(no1) || isNaN(no2)) {
+                alert("Don't leave the input fields blank");
+            } else {
+                var result = no1 - no2;
+                document.getElementById("result").value = "Subtraction = " + result;
+            }
+        }
+       
+    </script>
+
+
+    </script>
+
+</body>
+
+</html>
