@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>click on the dropddown list and see the magic </h1>
-    
+
     <select name="color1" id="change" onchange="col(this.value)">
-        <option >Select the Color</option>
-        <option value="Red" >Red</option>
-        <option value="green" >Green</option>
+        <option>Select the Color</option>
+        <option value="Red">Red</option>
+        <option value="green">Green</option>
         <option value="Blue">Blue</option>
-        <option value="Yellow" >Yellow</option>
-        <option value="cyan" >cyan</option>
-        <option value="purple" >purple</option>
+        <option value="Yellow">Yellow</option>
+        <option value="cyan">cyan</option>
+        <option value="purple">purple</option>
     </select>
     <script>
-        function col(color)
-        {
-         
-            
-            document.body.style.backgroundColor=color
+        function col(color) {
+
+            if (color == "Select the Color") {
+                alert(" please select the color")
+            }
+            else
+               
+            var newwin = window.open("", "new page", "width =1440 , height = 600")
+            newwin.document.write("color is chanhed to " + color)
+            newwin.document.body.style.backgroundColor = color;
+
 
 
         }
 
 
     </script>
-    
+
 </body>
+
 </html>

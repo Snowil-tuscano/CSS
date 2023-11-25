@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="h2"> welcome to mumbai! </h2>
+    <input type="button" value="change text" onclick="changeText()">
+
+    <script>
+        function changeText() {
+            // Use a regular expression pattern as a string
+            var pattern = /mumbai/g;
+            
+            // Get the current content of the h2 element
+            var currentText = document.getElementById("h2").innerHTML;
+
+            // Use the replace method to replace the text
+            var newText = currentText.replace(pattern, "india");
+
+            // Update the content of the h2 element
+            document.getElementById("h2").innerHTML = newText;
+        }
+    </script>
+</body>
+</html>

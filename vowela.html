@@ -9,15 +9,15 @@
 <body>
     <script>
         function countVowel(str){
-            var count = str.match(/[aeiou]/gi).length
+            var count = str.trim().match(/[aeiou]/gi).length
            //used regex
             return count
         }
 
-        var string = prompt("\n enter a string ")
+        var string = prompt(" enter a string ")
           var result = countVowel(string)
-          document.write(result)
-    </script>
+          document.write("no of vowels = "+result)
+    </script>   
     
 </body>
 </html>
