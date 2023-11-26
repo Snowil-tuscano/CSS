@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Frame 1</title>
 </head>
 <body>
-    
-    
+    <div align="center">
+        <b><label for="">Frame 1</label></b> <br> <br>
+        <input type="button" value="Sports" onclick="showSports()">
+        <input type="button" value="Music" onclick="showMusic()">
+        <input type="button" value="Dance" onclick="showDance()">
+        <script>
+            function showSports() {
+                parent.frames["sports"].location.href = "sports.html";
+            }
+
+            function showMusic() {
+                parent.frames["music"].location.href = "music.html";
+            }
+
+            function showDance() {
+                parent.frames["dance"].location.href = "dance.html";
+            }
+        </script>
+    </div>
 </body>
 </html>
