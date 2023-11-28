@@ -2,19 +2,23 @@
 <html>
 
 <head>
-    
+
     <script type="text/javascript">
         var mywin;
         function OpenWindowFunction() {
             mywin = window.open("", "MyWindow", "left=500, top=400,width=200,height=200")
         }
         function CloseWindowFunction() {
-            if (mywin.open()==1) {
-                mywin.close();    
-            }
-            else
-               alert("Open a Window")
-        } 
+            mywin.close()
+        }
+        function FocusWindowFunction() {
+            mywin.focus()
+        }
+        function BlurWindowFunction(){
+            mywin.blur()
+
+
+        }
     </script>
 </head>
 
@@ -22,6 +26,10 @@
     <form name="form1">
         <input type="button" value="Open Window" onclick="OpenWindowFunction()" />
         <input type="button" value="Close Window" onclick="CloseWindowFunction()" />
+        <input type="button" value="focus Window" onclick="FocusWindowFunction()" />
+        <input type="button" value="Blur Window" onclick="BlurWindowFunction()" />
+
+
     </form>
 </body>
 
