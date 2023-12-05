@@ -37,6 +37,8 @@ each fruit. -->
                 document.getElementById("img").src = imageSource;
                 var newwin = window.open("", "new window", "width= 600, height=400")
                 newwin.document.write(" Banana is sweet and long " + imageSource)
+                //newwin.document.write('<img src="' + imageSource + '" height="400" width="600"><br><br>');
+
                 setTimeout(function () {
                      newwin.close();}, 2000)
 
