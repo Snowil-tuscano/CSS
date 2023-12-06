@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> enter the elements seprated by comma</label>
+    <input type="text" id="ele"> <br><br>
+    <input type="button" value="clcik" onclick="sort()">
+    <p id="con" ></p>
+    <script>
+        function sort(){
+        var no = document.getElementById("ele").value
+        elementsArray = no.split(",")
+        elementsArray.sort()
+        for (var i = 0; i < elementsArray.length; i++) {
+                document.write(elementsArray[i]); document.write("<br>")
+            }
+        }
+    </script>
+</body>
+</html>
