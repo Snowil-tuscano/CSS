@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+//program to remove the duplicate elemnts
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        var array1 = [1, 1, 2, 4, 3, 2, 3, 4, 5, 5, 6, 6];
+        
+        var uniqueArray = [];
+
+        function removeDuplicates(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (uniqueArray.indexOf(arr[i]) === -1) {
+                    uniqueArray.push(arr[i]);
+                }
+            }
+        }
+
+        removeDuplicates(array);
+
+        document.getElementById("result").innerHTML = "Unique array: " + uniqueArray;
+    </script>
+</body>
+</html>
