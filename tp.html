@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>snowil</title>
+    <title>Document</title>
 </head>
-
-<body>
-    <label for="">select the fruits or vegertables</label> <br>
-    <input type="radio" name="nat" value="fruits" onchange="cha(this.value)"> fruits
-    <input type="radio" name="nat" value="vegertables" onchange="cha(this.value)"> vegertables <br><br>
-    <select name="" id="tom">
-
-
-    </select>
+<body onload="rotate()">
+     
+    <img src="img1.jpg"  id="img" width="400" height="400" alt="" > <br><br>
+    
     <script>
-        function cha(val) {
-            if (val == "fruits") {
-                document.getElementById("tom").innerHTML = "<option >banana</option><option >pottao</option>"
+        var count =0 
+        function rotate(){
+            var pics =["img1.jpg","img2.jpg","img3.jpg"]
+            count= count+1
+            if (count>pics.length-1) {
+                count=0
+                
             }
-            if (val == "vegertables") {
-                document.getElementById("tom").innerHTML = "<option >brinjal</option><option >onion</option>"
+            if (count<0) {
+                count=pics.length-1
             }
+           document.getElementById("img").src=pics[count]
+           setTimeout("rotate()",2000)
         }
     </script>
 </body>
-
 </html>

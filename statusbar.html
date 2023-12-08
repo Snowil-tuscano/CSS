@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Bar Example</title>
+</head>
+<body>
+
+    <a href="#" onmouseover="showStatusBar('MSBTE')" onmouseout="clearStatusBar()">Hover over me</a>
+    <br><br>
+
+    <script>
+        function showStatusBar(text) {
+            window.status = text;
+        }
+
+        function clearStatusBar() {
+            window.status = '';
+        }
+    </script>
+
+</body>
+</html>
