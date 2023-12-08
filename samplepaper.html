@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <select name="" id="city" onchange="navigate(this.value)">
+     <option value="">Select the City</option>
+     <option value="mumbai">mumbai</option>
+     <option value="delhi">delhi</option>
+     <option value="kolkata">kolkata</option>
+    </select> <br> <br>
+    <img src="" id="img" width="400" height="400" alt=""><br>
+    <p id="desc" align="enter"></p>
+    <script>
+        function navigate(val){
+            if (val=="mumbai") {
+                document.getElementById("img").src="mumbai.jpg"
+                document.getElementById("desc").innerHTML="Mumbai, the capital city of Maharashtra, is a bustling metropolis on the west coast of India, known for its vibrant culture, economic significance as the financial capital, and iconic landmarks such as the Gateway of India. "
+                
+            }
+            if (val=="delhi") {
+                document.getElementById("img").src="delhi.jpg"
+                document.getElementById("desc").innerHTML="Delhi, the capital of India, is a historic city that seamlessly blends ancient heritage with modernity, featuring landmarks like the Red Fort and India Gate, and serving as a political and cultural hub. "
+                
+            }
+            if (val=="kolkata") {
+                document.getElementById("img").src="kolkata.jpg"
+                document.getElementById("desc").innerHTML="Kolkata, located in the eastern part of India, is renowned for its rich literary and artistic heritage, as well as its colonial architecture, and is often considered the cultural capital of the country. "
+                
+            }
+
+        }
+    </script>
+</body>
+</html>
