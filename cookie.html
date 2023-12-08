@@ -21,8 +21,7 @@
 
     }
     function getCookie() {
-        var cookiearray = document.cookie;
-        cookiearray = cookiearray.split("=");
+        var cookiearray = document.cookie.split("=");
         if (cookiearray[0] == "password")
             document.getElementById("content").innerHTML = "Last used password: " + cookiearray[1];
 else
