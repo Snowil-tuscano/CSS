@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label> Evaluation of the radio button </label> <br> <br>
+    <input type="radio" name="rbutton" value="Orange" onclick="change(this)"> Orange
+    <input type="radio" name="rbutton" value="Mango" onclick="change(this)"> Mango
+    <input type="radio" name="rbutton" value="Cherry" onclick="change(this)"> Cherry
+    <input type="radio" name="rbutton" value="Strawberry" onclick="change(this)"> Strawberry
+    <p id="desc"></p>
+
+    <script>
+        function change(selectedCheckbox) {
+            var selectedValue = selectedCheckbox.value;
+
+            if (selectedCheckbox.checked) {
+                document.getElementById("desc").innerHTML = "You selected: " + selectedValue;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

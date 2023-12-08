@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>snowil</title>
 </head>
-<body>
-    <script>
-        var str = prompt(" enter the string ")
 
-        if (str.charAt(0)== str.charAt(0).toUpperCase()) {
-            alert(" first letter is uppercase ")
+<body>
+    <label for="">select the fruits or vegertables</label> <br>
+    <input type="radio" name="nat" value="fruits" onchange="cha(this.value)"> fruits
+    <input type="radio" name="nat" value="vegertables" onchange="cha(this.value)"> vegertables <br><br>
+    <select name="" id="tom">
+
+
+    </select>
+    <script>
+        function cha(val) {
+            if (val == "fruits") {
+                document.getElementById("tom").innerHTML = "<option >banana</option><option >pottao</option>"
+            }
+            if (val == "vegertables") {
+                document.getElementById("tom").innerHTML = "<option >brinjal</option><option >onion</option>"
+            }
         }
-        else
-        alert(" letter is not uppercase")
     </script>
-    
 </body>
+
 </html>
