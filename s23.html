@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for=""> Enter Employee id</label>
+    <input type="number" name="" id="eid"> <br><br>
+    <label for="">Enter Employee Name</label>
+    <input type="text" name="" id="enam"> <br><br>
+    <label for="">Enter Designation</label>
+    <input type="text" name="" id="edesg">
+    <br><br>
+    <input type="button" value="Submit" onclick="validate()">
+    <br>
+
+
+    <script>
+        function validate() {
+            id = document.getElementById("eid").value
+            ename = document.getElementById("enam").value
+            desg = document.getElementById("edesg").value
+
+            document.getElementById("eid").style.backgroundColor = "blue"
+            document.getElementById("enam").style.backgroundColor = "blue"
+            document.getElementById("edesg").style.backgroundColor = "blue"
+
+            alert("email id :" + id + ename + "@yahoo.com")
+        }
+
+    </script>
+
+</body>
+
+</html>
