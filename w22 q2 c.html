@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var stud = [["amit", 70], ["summmit", 78], ["sbhikeh", 71]]
+        var sum = 0
+        for (i = 0; i < stud.length; i++) {
+            sum = sum + stud[i][1]
+        }
+
+        alert(sum)
+        var avg = sum / stud.length
+        alert(avg)
+
+        var t = stud.sort()
+
+        for (i = 0; i < stud.length; i++) {
+            document.write(t[i]); document.write("<br>")
+          }
+    </script>
+
+</body>
+
+</html>

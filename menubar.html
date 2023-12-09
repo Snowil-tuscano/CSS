@@ -16,7 +16,11 @@
     </select>
     <script>
         function navigate(link){
-            window.location=link.options[link.selectedIndex].value
+            page=link.options[link.selectedIndex].value
+            if (page!="") {
+                window.location=page
+                
+            }
         }
     </script>
 </body>
