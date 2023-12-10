@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <script>
         function countVowel(str){
+            if (!str) {
+                alert("enter string")
+            }
+            else
             var count = str.trim().match(/[aeiou]/gi).length
            //used regex
             return count
@@ -16,7 +19,7 @@
 
         var string = prompt(" enter a string ")
           var result = countVowel(string)
-          document.write("no of vowels = "+result)
+          document.write(string+" has no of vowels = "+result)
     </script>   
     
 </body>
