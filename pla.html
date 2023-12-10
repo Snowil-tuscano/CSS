@@ -9,12 +9,12 @@
 
 <body>
     <script>
-        var str = prompt("\n enter the string ")
+        var str = prompt(" enter the string ")
         if (str === null || str === "") {
-            document.write("\n invalid op")
+            document.write(" invalid op")
 
         }
-        else if (str == str.split("").reverse().join("")) { //split divide the array and rverse it and again joins it 
+        else if (str == str.toLowerCase().split("").reverse().join("")) { //split divide the array and rverse it and again joins it 
             document.write(str + " String is palindrone")
         }
         else {
