@@ -7,8 +7,7 @@
         pos = 0;
         function ScrollMessage() {
 
-            window.status =
-                msg.substring(pos, msg.length) + spacer + msg
+            msg.substring(pos, msg.length) + spacer + msg
                     .substring(0, pos);
             pos++;
             if (pos > msg.length)

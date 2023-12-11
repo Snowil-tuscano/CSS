@@ -1,25 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <input type="checkbox" name="" value="mango" onchange="cha(this)">mango <br><br>
-    <input type="checkbox" name="" value="orange" onchange="cha(this)">orange <br><br>
-    <p id="desc"></p>
-    <script>
-        function cha(selected){
-            selectedval = selected.value
-            if (selected.checked) {
-                document.getElementById("desc").innerHTML=" you selected "+selectedval
-
-                
-            }
-
-        }
-    </script>
-    
-</body>
-</html>
+<!DOCTYPE html> 
+<html> 
+    <body> 
+        <script> 
+           var phoneno = prompt("Enter Phone No."); 
+           var pattern1 = /^[(]\d{3,3}[)][-]\d{4,4}[-]\d{4,4}$/; 
+           //format (nnn)-nnnn-nnnn 
+           var pattern2 = /^\d{3,3}.\d{4,4}.\d{4,4}$/; 
+           //format NNN.NNNN.NNNN 
+           // \d matches any digit, {4,4} specifies minimum and max length, 
+           //  ^ specifies match the beginning, $ specifies match the end 
+           if(pattern1.test(phoneno) || pattern2.test(phoneno)) 
+           { 
+            alert("Phone No. is Valid") 
+           } 
+           else 
+           alert("Phone No. is Invalid") 
+          </script> 
+    </body> 
+</html> 

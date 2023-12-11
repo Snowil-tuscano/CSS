@@ -25,9 +25,12 @@
             ename = document.getElementById("enam").value
             desg = document.getElementById("edesg").value
 
-            document.getElementById("eid").style.backgroundColor = "blue"
-            document.getElementById("enam").style.backgroundColor = "blue"
-            document.getElementById("edesg").style.backgroundColor = "blue"
+            document.getElementById("eid").style.backgroundColor = "cyan"
+            document.getElementById("enam").style.backgroundColor = "cyan"
+            document.getElementById("edesg").style.backgroundColor = "cyan"
+            document.getElementById("eid").disabled = true;
+            document.getElementById("enam").disabled = true;
+            document.getElementById("edesg").disabled = true;
 
             alert("email id :" + id + ename + "@yahoo.com")
         }
