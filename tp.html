@@ -1,27 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title>
+            Getter and Setter
+        </title>
+        <script>
+            var Car ={
+                color : "Red",
+                name : "BMW",
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+                get Color(){
+                    return this.color;
+                },
+                get Name(){
+                    return this.name;
+                },
 
-<body>
+                set Color(newcolor){
+                    this.Color=newcolor;
+                },
+                set Name(newname){
+                    this.Name=newname;
+                }
 
-    <script>
-        var no = prompt(" enter the number till ffibonacii ")
-        n1 = 0, n2 = 1, nexterm
+            };
 
-        for (i = 0; i < no; i++) {
+            document.write("Car Color is : "+Car.color+"  Car Name is : "+Car.name+"<br>");
+            Car.color = "Yello";
+            Car.name = "Honda";
 
-            document.write(n1 + "<br>")
-            nexterm = n1 + n2
-            n1 = n2
-            n2 = nexterm
-        }
-    </script>
+            document.write("After changes <br>");
 
-</body>
+            document.write("Car Color is : "+Car.color+"  Car Name is : "+Car.name);
 
+
+
+        </script>
+    </head>
 </html>

@@ -3,13 +3,14 @@
     <body> 
         <script> 
            var phoneno = prompt("Enter Phone No."); 
-           var pattern1 = /^[(]\d{3,3}[)][-]\d{4,4}[-]\d{4,4}$/; 
+           var pattern1 = /^[(]\d{3,3}[)]-\d{4,4}-\d{4,4}$/; 
            //format (nnn)-nnnn-nnnn 
            var pattern2 = /^\d{3,3}.\d{4,4}.\d{4,4}$/; 
            //format NNN.NNNN.NNNN 
            // \d matches any digit, {4,4} specifies minimum and max length, 
            //  ^ specifies match the beginning, $ specifies match the end 
-           if(pattern1.test(phoneno) || pattern2.test(phoneno)) 
+           var result = pattern1.test(phoneno) || pattern2.test(phoneno) 
+           if(result) 
            { 
             alert("Phone No. is Valid") 
            } 
