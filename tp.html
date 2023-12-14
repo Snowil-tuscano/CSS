@@ -1,39 +1,22 @@
-<html>
-    <head>
-        <title>
-            Getter and Setter
-        </title>
-        <script>
-            var Car ={
-                color : "Red",
-                name : "BMW",
-
-                get Color(){
-                    return this.color;
-                },
-                get Name(){
-                    return this.name;
-                },
-
-                set Color(newcolor){
-                    this.Color=newcolor;
-                },
-                set Name(newname){
-                    this.Name=newname;
-                }
-
-            };
-
-            document.write("Car Color is : "+Car.color+"  Car Name is : "+Car.name+"<br>");
-            Car.color = "Yello";
-            Car.name = "Honda";
-
-            document.write("After changes <br>");
-
-            document.write("Car Color is : "+Car.color+"  Car Name is : "+Car.name);
-
-
-
-        </script>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" value="tea" onclick="change('tea')" name="" id="">tea
+    <input type="checkbox" value="tea" onclick="change('tea')" name="" id="">tea
+<select name="" id="opt"><
+    </select>
+<script>
+     function change(val){
+        if(val=='tea'){
+            document.getElementById("opt").innerHTML="<option >moon</option>"
+        }
+     }
+</script>
+    
+</body>
 </html>
